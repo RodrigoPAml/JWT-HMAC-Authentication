@@ -7,7 +7,7 @@ namespace JWT_HMAC.Providers
 {
     public static class JwtProvider
     {
-        public static string? CreateToken<T>(string secretKey, T payload) where T : PayloadBase
+        public static string CreateToken<T>(string secretKey, T payload) where T : PayloadBase
         {
             var header = new
             {
@@ -30,7 +30,7 @@ namespace JWT_HMAC.Providers
             return $"{unsignedToken}.{Utils.CleanBase64(signature)}";
         }
 
-        public static T? ValidateToken<T>(string token, string secretKey) where T : PayloadBase
+        public static T ValidateToken<T>(string token, string secretKey) where T : PayloadBase
         {
             var parts = token.Split('.');
             
