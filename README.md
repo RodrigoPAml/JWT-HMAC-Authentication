@@ -117,7 +117,7 @@ Verify token with wrong key: False
 Verify token with invalid token: False
 ```
 
-Decoding with https://jwt.io/ he verify that it works
+Decoding with https://jwt.io/ so we verify that it works
 
 ![image](https://github.com/user-attachments/assets/31c53442-1132-48f1-94f0-f13e2ce24791)
 
